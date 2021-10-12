@@ -11,6 +11,21 @@ PHP findIndex (v0.1) – get index of first array item which passes callback
 PHP findIndexes (v0.1) – get index list of items which passes callback on array
 (PHP findIndexes)
 
+
+**Usage:**
+Include the file into the PHP code. 
+> Check example.php file for sample function calls.
+```
+<?php
+
+require_once('array_reduce_JS.php');
+require_once('findIndex.php');
+require_once('findIndexes.php');
+
+?>
+```
+
+
 (c) Ram Narula 
 You can use this information, do give credit: github rambkk - Ram Narula - pluslab.net
 
