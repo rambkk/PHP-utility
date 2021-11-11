@@ -5,7 +5,13 @@
  *
  * PHP array_reduce_key (v0.11) - array_reduce with additional parameters
  * (javascript like reduce method)
- * array_reduce with key
+ * array_reduce with key, 
+ * (if initial value of carry is not specified, null is used)
+ *
+ * PHP array_reduce_JS (v0.12) - array_reduce with additional parameters
+ * (javascript like reduce method)
+ * if initial value of carry is not specified, first item of input ARRAY is used, and CALLBACK starts on the second item 
+ *
  *
  * PHP findIndex (v0.1) - get index of first array item which passes callback
  * (javascript like findIndex)
@@ -21,8 +27,8 @@ require_once('findIndex.php');
 require_once('findIndexes.php');
 $intro=<<<'END'
  * Version:
- * array_reduce_JS 0.11 initial release
- * array_reduce_key 0.1 initial release
+ * array_reduce_JS 0.12 initial release
+ * array_reduce_key 0.11 initial release
  * findIndex 0.11 initial release
  * findIndexes 0.11 initial release
  *
