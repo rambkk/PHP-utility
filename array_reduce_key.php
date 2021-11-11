@@ -1,6 +1,6 @@
 <?php
 /*
- * PHP array_reduce_key (v0.1) - array_reduce with additional parameters
+ * PHP array_reduce_key - array_reduce with additional parameters
  *
  * javascript like reduce method, with default initial value of $c is null if not specified
  * (in javascript default $c is first elment of the array $a and the callback starts from second item)
