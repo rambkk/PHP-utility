@@ -2,13 +2,22 @@
 PHP utility - functions to simplify basic tasks --- Additional functions for working on array
 
 
-PHP array_reduce_JS (v0.1) – array_reduce with additional parameters
+PHP array_reduce_JS – array_reduce with additional parameters
 (javascript like reduce method) (array_reduce with key / index)
+(if initial value of carry item is not specified, 
+ initial carry item is the first item of array 
+ and the callback starts on the second item)
 
-PHP findIndex (v0.1) – get index of first array item which passes callback
+PHP array_reduce_key – array_reduce with additional parameters
+(javascript like reduce method) (array_reduce with key / index)
+(if initial value of carry item is not specified,
+ initial value of carry is null)
+
+
+PHP findIndex – get index of first array item which passes callback
 (javascript like findIndex) (PHP findIndex)
 
-PHP findIndexes (v0.1) – get index list of items which passes callback on array
+PHP findIndexes  – get index list of items which passes callback on array
 (PHP findIndexes)
 
 
