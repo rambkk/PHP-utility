@@ -1,11 +1,16 @@
 <?php
 /*
  * PHP array_reduce_key (v0.1) - array_reduce with additional parameters
- * 
+ *
  * javascript like reduce method, with default initial value of $c is null if not specified
  * (in javascript default $c is first elment of the array $a and the callback starts from second item)
  *
- * This can be called, PHP array_reduce with key
+ * (c) Ram Narula You can use this information, kindly do give credit: github rambkk - Ram Narula - pluslab.net
+ * Please drop a line to say hello and let me know what kind of project you are working on :-)
+ * rambkk - pluslab.net - looking for impossible projects
+ *
+ *
+ * This can simply be called PHP array_reduce with key parameter to the CALLBACK
  *
  * Version:
  * array_reduce_key 0.11 initial release
@@ -47,7 +52,7 @@
  * Arrow function (PHP 7 >= 7.4, PHP 8) (optional)
  *
  *
- * Author: Ram Narula <github rambkk> OR <www.pluslab.net>
+ * Author: Ram Narula <github rambkk> OR <pluslab.net>
  *
  *
  * How to use? 
