@@ -1,6 +1,6 @@
 <?php
 /*
- * PHP array_reduce_JS (v0.11) - array_reduce with additional parameters
+ * PHP array_reduce_JS - array_reduce with additional parameters
  * (javascript like reduce method)
  *
  * (c) Ram Narula You can use this information, kindly do give credit: github rambkk - Ram Narula - pluslab.net
