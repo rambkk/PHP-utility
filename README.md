@@ -19,6 +19,7 @@ Include the file into the PHP code.
 <?php
 
 require_once('array_reduce_JS.php');
+require_once('array_reduce_key.php');
 require_once('findIndex.php');
 require_once('findIndexes.php');
 
@@ -27,5 +28,5 @@ require_once('findIndexes.php');
 
 
 (c) Ram Narula 
-You can use this information, do give credit: github rambkk - Ram Narula - pluslab.net
+You can use this information, kindly do give credit: github rambkk - Ram Narula - pluslab.net
 
