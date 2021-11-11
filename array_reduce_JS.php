@@ -3,10 +3,15 @@
  * PHP array_reduce_JS (v0.11) - array_reduce with additional parameters
  * (javascript like reduce method)
  *
+ * (c) Ram Narula You can use this information, kindly do give credit: github rambkk - Ram Narula - pluslab.net
+ * Please drop a line to say hello and let me know what kind of project you are working on :-)
+ * rambkk - pluslab.net - looking for impossible projects
+ *
+ *
  * array_reduce with key - with javascript style default initial value of $c
  *
  * Version:
- * array_reduce_JS 0.11 initial release
+ * array_reduce_JS 0.12 initial release with minor bug fix
  *
  * Requirement: 
  * PHP 5 >= 5.3.0, PHP 7, PHP 8 (without using Arrow function)
@@ -66,8 +71,8 @@
 /* ----------- */
 
 
-function array_reduce_JS($a,$f,...$arg){ $arg?$c=$arg[0]:$c=$a[key($a)];foreach($arg?$a:array_slice($a,1,1,true) as $k=>$v)$c=$f($c,$v,$k,$a);return $c; } 
+function array_reduce_JS($a,$f,...$arg){ $arg?$c=$arg[0]:$c=$a[key($a)];foreach($arg?$a:array_slice($a,1,null,true) as $k=>$v)$c=$f($c,$v,$k,$a);return $c; } 
 
 
 //Anonymous functions as some might prefer
-//$array_reduce_JS=function($a,$f,...$arg){ $arg?$c=$arg[0]:$c=$a[key($a)];foreach($arg?$a:array_slice($a,1,1,true) as $k=>$v)$c=$f($c,$v,$k,$a);return $c; };
+//$array_reduce_JS=function($a,$f,...$arg){ $arg?$c=$arg[0]:$c=$a[key($a)];foreach($arg?$a:array_slice($a,1,null,true) as $k=>$v)$c=$f($c,$v,$k,$a);return $c; };
