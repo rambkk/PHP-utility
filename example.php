@@ -3,7 +3,7 @@
  * PHP Utility examples by <github rambkk> - <pluslab.net>
  *
  *
- * PHP array_reduce_JS (v0.1) - array_reduce with additional parameters
+ * PHP array_reduce_key (v0.11) - array_reduce with additional parameters
  * (javascript like reduce method)
  * array_reduce with key
  *
@@ -15,12 +15,14 @@
  */
 
 
+require_once('array_reduce_key.php');
 require_once('array_reduce_JS.php');
 require_once('findIndex.php');
 require_once('findIndexes.php');
-
+$intro=<<<'END'
  * Version:
  * array_reduce_JS 0.11 initial release
+ * array_reduce_key 0.1 initial release
  * findIndex 0.11 initial release
  * findIndexes 0.11 initial release
  *
@@ -29,24 +31,33 @@ require_once('findIndexes.php');
  * PHP 7 >= 7.4, PHP 8 (optional for using Arrow function)
  * (Tested on php 7.4.3)
  *
+END;
+
 /* Examples: */
 
 $list=[1,2,3,4,5];
 $initial=10000;
 
-$sumOdd=array_reduce_JS($list,function($c,$v){ if($v % 2 == 1) { return $v+$c; } else { return $c; } },$initial);
+$sumOdd=array_reduce_key($list,function($c,$v){ if($v % 2 == 1) { return $v+$c; } else { return $c; } },$initial);
 echo "Sum odd with initial: $sumOdd\n";
 
 
 //with ternary operator instead of if
-$sumEven=array_reduce_JS($list,function($c,$v){return ($v % 2 == 0)?$v+$c:$c; });
+$sumEven=array_reduce_key($list,function($c,$v){return ($v % 2 == 0)?$v+$c:$c; });
 echo "Sum even: $sumEven\n";
 
 
-$sumEvenIndex=array_reduce_JS($list,function($c,$v,$i,$a){return ($i % 2 === 0)?$v+$c:$c; });
+$sumEvenIndex=array_reduce_key($list,function($c,$v,$i,$a){return ($i % 2 === 0)?$v+$c:$c; });
 echo "Sum of items with even index numbers (index starts with 0):   $sumEvenIndex\n";
 
+array_reduce_key($list,function($c,$v,$i,$a){echo "($c ... $v)"; });
+// ( ... 1)( ... 2)( ... 3)( ... 4)( ... 5)
 
+array_reduce_JS($list,function($c,$v,$i,$a){echo "$c ... $v"; });
+// (1 ... 2)( ... 3)( ... 4)( ... 5) 
+// Note the difference:
+// without initial value of $c, the default initial value is the first item of input ARRAY
+// and the function runs with second item of ARRAY for $v and $i 
 
 /* Additional examples */
 
