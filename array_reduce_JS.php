@@ -3,7 +3,7 @@
  * PHP array_reduce_JS (v0.11) - array_reduce with additional parameters
  * (javascript like reduce method)
  *
- * array_reduce with key
+ * array_reduce with key - with javascript style default initial value of $c
  *
  * Version:
  * array_reduce_JS 0.11 initial release
@@ -20,16 +20,16 @@
  * ---------------
  * This works the SIMILAR way as general PHP array_reduce function with
  * the addition of additional optional parameters to the CALLBACK.
- * The difference is the initial default value of $i, in PHP array_reduce, the default 
- * value of $i is null while in Javascript reduce method, if $i is not specified, 
- * the default is the first item of the ARRAY and processing starts with the second 
+ * The difference is the initial default value of $c, in PHP array_reduce, the default 
+ * initial value of $c is null while in Javascript reduce method, if the initial value of $c 
+ * is not specified, the default is the first item of the ARRAY and processing starts with the second 
  * value of the ARRAY.
  * 
  * General explanation:
  * Run CALLBACK on each items of ARRAY and put the result as $c for the next CALLBACK
  * Result from CALLBACK on last item will be returned
  *
- * NOTE: This might not work properly as a drop-in replacement for array_reduce function
+ * NOTE: This MIGHT NOT work properly as a drop-in replacement for array_reduce function
  * NOTE: For more information look up Javascript reduce method and PHP array_reduce function
  * NOTE: array_reduce_JS needs more processing resources than the built-in array_reduce
  *
